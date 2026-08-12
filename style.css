@@ -4,14 +4,14 @@
 
         /* Variáveis Gerais do Tema */
         :root {
-            --bg-color: #f0f4f8;
+            --bg-color: #a31f5e;
             --text-color: #fd02ae;
             --primary-color: #580964;
             --primary-hover: #6e1886;
             --secondary-color: #014f86;
-            --card-bg: #ffffff;
-            --alert-bg: #fff8e1;
-            --alert-border: #82fff9;
+            --card-bg: #75e8d6;
+            --alert-bg: #ca5cc8;
+            --alert-border: #0eb8b0;
             --alert-text: #951034;
             --danger-color: #b71c1c;
             --success-color: #7c1316;
