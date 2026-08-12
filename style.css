@@ -1,84 +1,70 @@
-/* Configurações Gerais - Foco em Acessibilidade */
+/* Configurações Globais para Facilidade de Leitura */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px; /* Fonte maior para facilitar a leitura */
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f7f6;
-    color: #222222; /* Alto contraste entre o texto e o fundo */
+    background-color: #f4f6f9;
+    color: #111111; /* Alto contraste */
+    padding: 20px;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #0056b3;
-    color: #ffffff;
     text-align: center;
+    background-color: #004085;
+    color: #ffffff;
     padding: 30px 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
 }
 
 header h1 {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 10px;
 }
 
-/* Menu de Navegação */
-nav {
-    background-color: #003366;
-    padding: 15px;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 22px;
-    padding: 8px 16px;
-    border-radius: 5px;
-}
-
-nav a:hover, nav a:focus {
-    background-color: #ffcc00;
-    color: #000000;
-}
-
-/* Layout Principal */
+/* Layout dos Cards */
 main {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* Cartões de Conteúdo */
 .card {
     background-color: #ffffff;
     border: 2px solid #cccccc;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .card h2 {
-    color: #0056b3;
-    font-size: 28px;
-    border-bottom: 3px solid #0056b3;
-    padding-bottom: 8px;
-    margin-top: 0;
+    font-size: 26px;
+    color: #004085;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #004085;
+    padding-bottom: 5px;
 }
 
-/* Estilo de Alerta */
+/* Listas */
+ul {
+    list-style-type: square;
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+/* Seção de Alertas (Golpes) */
 .alerta {
-    border-color: #d9534f;
+    border-left: 8px solid #d9534f;
 }
 
 .alerta h2 {
@@ -86,38 +72,36 @@ main {
     border-bottom-color: #d9534f;
 }
 
-.topico {
-    margin-top: 20px;
-}
-
-.topico h3 {
-    font-size: 22px;
-    margin-bottom: 5px;
-}
-
-/* Botões Grandes para Acessibilidade */
-.btn-ajuda {
-    display: inline-block;
-    background-color: #28a745;
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: bold;
-    padding: 15px 30px;
-    border: none;
+.dica-golpe {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 15px;
     border-radius: 8px;
-    cursor: pointer;
     margin-top: 15px;
 }
 
-.btn-ajuda:hover {
-    background-color: #218838;
+.dica-golpe h3 {
+    font-size: 22px;
+    color: #856404;
+    margin-bottom: 8px;
+}
+
+/* Destaque Final */
+.destaque {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    text-align: center;
+}
+
+.texto-destaque {
+    font-size: 22px;
+    color: #155724;
 }
 
 /* Rodapé */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #222222;
-    color: #ffffff;
-    margin-top: 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #555555;
 }
