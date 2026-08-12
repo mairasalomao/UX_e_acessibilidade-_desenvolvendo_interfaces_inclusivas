@@ -22,14 +22,14 @@
 
         /* Tema Alto Contraste */
         body.high-contrast {
-            --bg-color: #000000;
+            --bg-color: #088e6f;
             --text-color: #ffffff;
-            --primary-color: #ffff00;
-            --primary-hover: #ffd700;
-            --secondary-color: #00e676;
+            --primary-color: #824fcf;
+            --primary-hover: #7a1195;
+            --secondary-color: #4c0a2d;
             --card-bg: #121212;
-            --alert-bg: #2a2a00;
-            --alert-border: #ffff00;
+            --alert-bg: #a33561;
+            --alert-border: #e30c62;
             --alert-text: #ffffff;
             --danger-color: #ff5252;
             --success-color: #69f0ae;
