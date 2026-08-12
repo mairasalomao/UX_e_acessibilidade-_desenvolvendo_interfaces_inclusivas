@@ -3,53 +3,396 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia de Segurança na Internet para a Terceira Idade</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Navegue Sem Medo - Guia de Internet e Segurança para a Terceira Idade</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
+    <!-- Barra de Acessibilidade Superior -->
+    <div class="accessibility-bar" aria-label="Controles de Acessibilidade">
+        <span>Ajustes de Leitura:</span>
+        <div class="acc-btn-group">
+            <button class="acc-btn" onclick="alterarFonte(2)" title="Aumentar Letra">🔍 A+</button>
+            <button class="acc-btn" onclick="alterarFonte(-2)" title="Diminuir Letra">🔍 A-</button>
+            <button class="acc-btn" onclick="alternarContraste()" title="Mudar Cores para Alto Contraste">🎨 Alto Contraste</button>
+            <button class="acc-btn" onclick="alternarFonteDislexia()" title="Fonte Fácil para Leitura">📖 Fonte Fácil</button>
+            <button class="acc-btn" onclick="alternarCursor()" title="Aumentar Ponteiro do Mouse">🖱️ Ponteiro Grande</button>
+        </div>
+    </div>
+
+    <!-- Cabeçalho Principal -->
     <header>
-        <h1>Navegue com Segurança</h1>
-        <p>Seu guia simples para usar a internet sem medo</p>
+        <h1>Navegue Sem Medo</h1>
+        <p>Seu espaço de aprendizado e proteção para usar a internet com tranquilidade, independência e segurança.</p>
     </header>
 
-    <main>
-        <section class="card">
-            <h2> Como Navegar Bem</h2>
-            <ul>
-                <li><strong>Letras Maiores:</strong> Se o texto estiver pequeno, segure a tecla <strong>Ctrl</strong> e aperte o sinal de <strong>+</strong> no teclado.</li>
-                <li><strong>Calma ao Clicar:</strong> Clique apenas uma vez nos links e botões. Espera a página carregar.</li>
-                <li><strong>Favoritos:</strong> Salve os sites que você mais usa (como o do seu banco) nos favoritos do navegador.</li>
-            </ul>
+    <!-- Menu de Navegação Rápida -->
+    <nav class="nav-menu container" aria-label="Navegação por Seções">
+        <a href="#dicas-navegacao" class="nav-link">📍 Dicas de Navegação</a>
+        <a href="#icones-comuns" class="nav-link">🔣 Botões da Tela</a>
+        <a href="#testar-link" class="nav-link">🔎 Analisar Link Suspeito</a>
+        <a href="#principais-golpes" class="nav-link">⚠️ Evitar Golpes</a>
+        <a href="#simulador" class="nav-link">🎯 Treino Prático</a>
+        <a href="#emergencia" class="nav-link">🆘 O que fazer em Emergências</a>
+    </nav>
+
+    <main class="container">
+
+        <!-- Bloco 1: Como Navegar com Segurança -->
+        <section class="card" id="dicas-navegacao">
+            <h2>📍 Aprendendo a Navegar na Internet</h2>
+            
+            <button class="btn-speak" onclick="lerTexto('secao1-conteudo')">
+                🔊 Ouvir esta explicação em voz alta
+            </button>
+
+            <div id="secao1-conteudo">
+                <p style="margin-bottom: 15px;">Navegar na internet pode ser tão simples quanto folhear um jornal. Com pequenas precauções, você evita problemas:</p>
+                
+                <ul class="dica-lista">
+                    <li>
+                        <strong>Apenas Um Clique:</strong> Na internet, para abrir botões ou links, você só precisa de <strong>um clique</strong> suave. Espera um pouco a página carregar.
+                    </li>
+                    <li>
+                        <strong>Confira o Cadeado 🔒:</strong> Em sites de bancos ou compras, olhe bem no topo da tela. A presença de um **cadeado fechado** indica segurança.
+                    </li>
+                    <li>
+                        <strong>Não Compartilhe Códigos:</strong> Se receber um código por SMS no celular, **nunca passe esse número para ninguém**, nem por telefone ou mensagem.
+                    </li>
+                    <li>
+                        <strong>Aumente a Letra Quando Quiser:</strong> Se achar difícil ler algo, segure a tecla <strong>Ctrl</strong> e aperte a tecla <strong>+</strong> no seu computador.
+                    </li>
+                </ul>
+            </div>
         </section>
 
-        <section class="card alerta">
-            <h2> Cuidado com Golpes!</h2>
-            <div class="dica-golpe">
-                <h3>1. Mensagens pedindo dinheiro</h3>
-                <p>Se um parente ou amigo pedir dinheiro urgente pelo WhatsApp usando um número novo, **ligue para o número antigo dele** antes de transferir qualquer valor.</p>
-            </div>
+        <!-- Bloco 2: Guia Visual de Ícones da Tela -->
+        <section class="card" id="icones-comuns">
+            <h2>🔣 Significado dos Botões da Tela</h2>
 
-            <div class="dica-golpe">
-                <h3>2. Prêmios e Promoções Falsas</h3>
-                <p>Ninguém ganha prêmios, carros ou dinheiro sem ter participado de um sorteio. Se receber mensagens dizendo que você ganhou algo, **não clique no link**.</p>
-            </div>
+            <button class="btn-speak" onclick="lerTexto('secao2-conteudo')">
+                🔊 Ouvir explicação dos símbolos
+            </button>
 
-            <div class="dica-golpe">
-                <h3>3. Senhas e Dados Pessoais</h3>
-                <p>Bancos e empresas **nunca** ligam pedindo sua senha ou código de validação por telefone ou mensagem.</p>
+            <div id="secao2-conteudo">
+                <p>Veja o que significam os desenhos mais comuns em celulares e computadores:</p>
+
+                <div class="icones-grid">
+                    <div class="icone-card">
+                        <span class="icone-simbolo">🔍</span>
+                        <strong>Lupa</strong>
+                        <p style="font-size: 0.9em;">Serve para buscar contatos, vídeos ou informações.</p>
+                    </div>
+                    <div class="icone-card">
+                        <span class="icone-simbolo">🗑️</span>
+                        <strong>Lixeira</strong>
+                        <p style="font-size: 0.9em;">Apaga mensagens, fotos ou arquivos indesejados.</p>
+                    </div>
+                    <div class="icone-card">
+                        <span class="icone-simbolo">🔗</span>
+                        <strong>Link / Corrente</strong>
+                        <p style="font-size: 0.9em;">Um endereço de site onde você pode clicar.</p>
+                    </div>
+                    <div class="icone-card">
+                        <span class="icone-simbolo">⚙️</span>
+                        <strong>Engrenagem</strong>
+                        <p style="font-size: 0.9em;">Abre os ajustes e configurações do aparelho.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="card destaque">
-            <h2> Regra de Ouro</h2>
-            <p class="texto-destaque">Na dúvida, <strong>PARE</strong> e pergunte a alguém de sua confiança antes de clicar em qualquer botão ou enviar informações!</p>
+        <!-- Bloco 3: Verificador Simulado de Links Suspeitos -->
+        <section class="card" id="testar-link">
+            <h2>🔎 Teste de Link: É Seguro Clicar?</h2>
+
+            <button class="btn-speak" onclick="lerTexto('secao3-conteudo')">
+                🔊 Ouvir instruções do verificador
+            </button>
+
+            <div id="secao3-conteudo">
+                <p>Cole ou digite abaixo um endereço da internet (link) que você recebeu por mensagem para testar se ele parece perigoso:</p>
+
+                <div class="link-tester">
+                    <input type="text" id="input-link" class="input-box" placeholder="Exemplo: http://banco-promocao-gratis.com" aria-label="Digite ou cole o link aqui">
+                    <button class="btn-testar" onclick="analisarLink()">Analisar Endereço</button>
+
+                    <div id="resultado-link" class="resultado-simulacao"></div>
+                </div>
+            </div>
         </section>
+
+        <!-- Bloco 4: Principais Golpes na Internet -->
+        <section class="card" id="principais-golpes">
+            <h2>⚠️ Os Golpes Mais Frequentes e Como Fugir Deles</h2>
+
+            <button class="btn-speak" onclick="lerTexto('secao4-conteudo')">
+                🔊 Ouvir alertas sobre golpes
+            </button>
+
+            <div id="secao4-conteudo">
+                <div class="alerta-item">
+                    <h3>1. O Golpe do Falso Parente no WhatsApp</h3>
+                    <p>Uma pessoa manda mensagem de um número novo com a foto do seu parente dizendo que mudou de número e precisa de dinheiro urgente.</p>
+                    <p><strong>🚨 O que fazer:</strong> NÃO mande dinheiro! Ligue para o **número antigo** do seu parente para falar diretamente com ele.</p>
+                </div>
+
+                <div class="alerta-item">
+                    <h3>2. A Falsa Ligação do Banco</h3>
+                    <p>Alguém liga dizendo ser da segurança do banco, afirma que sua conta foi hackeada e pede para você fazer uma transferência de segurança.</p>
+                    <p><strong>🚨 O que fazer:</strong> Desligue o telefone na hora. O banco jamais liga pedindo transferências ou senhas.</p>
+                </div>
+
+                <div class="alerta-item">
+                    <h3>3. Prêmios e Sorteios Falsos por SMS</h3>
+                    <p>Mensagens dizendo que você ganhou um prêmio, uma cesta de alimentos ou um grande desconto clicando em um link enviado por texto.</p>
+                    <p><strong>🚨 O que fazer:</strong> Apague a mensagem. Ninguém dá prêmios sem você ter se cadastrado antes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bloco 5: Treino Prático de Golpes -->
+        <section class="card" id="simulador">
+            <h2>🎯 Treino Prático: Teste Seus Conhecimentos</h2>
+            <p>Escolha uma situação para treinar o que fazer na prática:</p>
+
+            <div class="simulador-box">
+                <!-- Seletor de Cenários -->
+                <div class="simulador-passos">
+                    <button class="passo-btn ativo" onclick="carregarCenario(1, this)">Cenário 1: WhatsApp</button>
+                    <button class="passo-btn" onclick="carregarCenario(2, this)">Cenário 2: Chamada do Banco</button>
+                    <button class="passo-btn" onclick="carregarCenario(3, this)">Cenário 3: Sorteio no SMS</button>
+                </div>
+
+                <div id="cenario-conteudo">
+                    <!-- Preenchido via JavaScript -->
+                </div>
+
+                <div id="resultado-painel" class="resultado-simulacao"></div>
+            </div>
+        </section>
+
+        <!-- Bloco 6: O que fazer em Emergências e Contatos Úteis -->
+        <section class="card" id="emergencia">
+            <h2>🆘 O Que Fazer se Você Achar Que Caiu em um Golpe?</h2>
+
+            <button class="btn-speak" onclick="lerTexto('secao6-conteudo')">
+                🔊 Ouvir passos de emergência
+            </button>
+
+            <div id="secao6-conteudo">
+                <p>Se você desconfiar que clicou num link falso ou fez uma transferência por engano, siga estes passos imediatamente:</p>
+
+                <div class="passos-emergencia">
+                    <div class="passo-card">
+                        <div class="passo-numero">1</div>
+                        <strong>Avise o Banco</strong>
+                        <p style="font-size: 0.9em;">Ligue para o número oficial atrás do seu cartão e peça o bloqueio imediato.</p>
+                    </div>
+                    <div class="passo-card">
+                        <div class="passo-numero">2</div>
+                        <strong>Peça Ajuda</strong>
+                        <p style="font-size: 0.9em;">Chame um familiar ou amigo de confiança para acompanhar você.</p>
+                    </div>
+                    <div class="passo-card">
+                        <div class="passo-numero">3</div>
+                        <strong>Troque Senhas</strong>
+                        <p style="font-size: 0.9em;">Altere as senhas das suas contas com a ajuda de alguém confiável.</p>
+                    </div>
+                    <div class="passo-card">
+                        <div class="passo-numero">4</div>
+                        <strong>Boletim de Ocorrência</strong>
+                        <p style="font-size: 0.9em;">Registre o caso na Polícia Civil para sua proteção jurídica.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 30px; color: var(--primary-color);">📞 Telefones Importantes:</h3>
+
+                <div class="contatos-grid">
+                    <div class="contato-card">
+                        <strong>Polícia Militar / Emergência</strong>
+                        <span>Para ocorrências imediatas</span>
+                        <span class="contato-numero">Disque 190</span>
+                    </div>
+                    <div class="contato-card">
+                        <strong>Disque Direitos Humanos</strong>
+                        <span>Apoio e denúncias sociais</span>
+                        <span class="contato-numero">Disque 100</span>
+                    </div>
+                    <div class="contato-card">
+                        <strong>Central do Seu Banco</strong>
+                        <span>Número impresso no verso do cartão</span>
+                        <span class="contato-numero">Atrás do Cartão</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- Rodapé -->
     <footer>
-        <p>Guia feito para ajudar você a aproveitar o melhor da internet de forma segura.</p>
+        <p><strong>Navegue Sem Medo</strong> - Guia de Inclusão Digital e Segurança para a Terceira Idade</p>
+        <p style="margin-top: 8px; opacity: 0.85;">Desenvolvido com carinho para promover autonomia e tranquilidade na internet.</p>
     </footer>
 
+    <!-- Scripts de Interatividade -->
+    <script>
+        // --- 1. Tamanho da Fonte ---
+        let tamanhoFonteAtual = 21;
+
+        function alterarFonte(delta) {
+            tamanhoFonteAtual += delta;
+            if (tamanhoFonteAtual < 16) tamanhoFonteAtual = 16;
+            if (tamanhoFonteAtual > 32) tamanhoFonteAtual = 32;
+            document.documentElement.style.setProperty('--font-size-base', tamanhoFonteAtual + 'px');
+        }
+
+        // --- 2. Alto Contraste ---
+        function alternarContraste() {
+            document.body.classList.toggle('high-contrast');
+        }
+
+        // --- 3. Fonte para Dislexia ---
+        function alternarFonteDislexia() {
+            document.body.classList.toggle('dyslexic-font');
+        }
+
+        // --- 4. Ponteiro do Mouse Ampliado ---
+        function alternarCursor() {
+            document.body.classList.toggle('large-cursor');
+        }
+
+        // --- 5. Sintetizador de Voz (Leitura em Áudio) ---
+        function lerTexto(elementId) {
+            if (!('speechSynthesis' in window)) {
+                alert('A leitura em voz não é suportada neste navegador.');
+                return;
+            }
+
+            window.speechSynthesis.cancel(); // Para qualquer leitura anterior
+
+            const elemento = document.getElementById(elementId);
+            if (!elemento) return;
+
+            const texto = elemento.innerText;
+            const utterance = new SpeechSynthesisUtterance(texto);
+            utterance.lang = 'pt-BR';
+            utterance.rate = 0.88; // Leitura levemente pausada para melhor compreensão
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // --- 6. Analisador Simulado de Links ---
+        function analisarLink() {
+            const linkInput = document.getElementById('input-link').value.trim().toLowerCase();
+            const painel = document.getElementById('resultado-link');
+
+            if (!linkInput) {
+                painel.style.display = 'block';
+                painel.className = 'resultado-simulacao resultado-errado';
+                painel.innerHTML = '⚠️ Por favor, digite ou cole um endereço de site no campo acima para analisar.';
+                return;
+            }
+
+            painel.style.display = 'block';
+
+            // Verificação simples simulada
+            if (linkInput.includes('banco') && !linkInput.startsWith('https://')) {
+                painel.className = 'resultado-simulacao resultado-errado';
+                painel.innerHTML = '🚨 ATENÇÃO! Este link parece SUSPEITO. Ele cita banco mas não começa com HTTPS seguro. NÃO CLIQUE!';
+            } else if (linkInput.includes('premio') || linkInput.includes('gratis') || linkInput.includes('sorteio') || linkInput.includes('desconto')) {
+                painel.className = 'resultado-simulacao resultado-errado';
+                painel.innerHTML = '🚨 ALERTA DE PERIGO! Links prometendo prêmios grátis ou sorteios são quase sempre golpes para roubar dados.';
+            } else if (linkInput.startsWith('https://') && (linkInput.includes('.com.br') || linkInput.includes('.org') || linkInput.includes('.gov.br'))) {
+                painel.className = 'resultado-simulacao resultado-correto';
+                painel.innerHTML = '✅ Este link utiliza protocolos de segurança (HTTPS) e domínios comuns. No entanto, mantenha a atenção ao digitar dados pessoais!';
+            } else {
+                painel.className = 'resultado-simulacao resultado-errado';
+                painel.innerHTML = '⚠️ Na dúvida, NÃO CLIQUE neste link. Pergunte a um familiar de sua confiança antes de abrir.';
+            }
+        }
+
+        // --- 7. Dados do Simulador de Golpes ---
+        const cenarios = {
+            1: {
+                situacao: "💬 Mensagem no WhatsApp vinda de um número desconhecido usando a foto do seu filho:\n'Oi mãe! Mudei de número. Preciso pagar uma conta urgente de R$ 350 agora. Pode fazer um Pix pra mim?'",
+                opcoes: [
+                    { texto: "A) Fazer o Pix rapidamente para salvar seu filho.", correta: false },
+                    { texto: "B) Ligar para o NÚMERO ANTIGO do seu filho para confirmar se é ele mesmo.", correta: true },
+                    { texto: "C) Salvar o novo número imediatamente sem perguntar nada.", correta: false }
+                ],
+                explicacaoCorreta: " PARABÉNS! Você agiu perfeitamente. Golpistas pegam fotos da internet para se passar por parentes. Sempre confirme ligando para o número antigo!",
+                explicacaoIncorreta: " CUIDADO! Essa atitude é arriscada. Golpistas usam a urgência para fazer você agir no impulso. Ligue sempre para o número antigo do parente!"
+            },
+            2: {
+                situacao: "📞 Ligação recebida no seu telefone:\n'Alô! É da Central de Segurança do Banco. Identificamos um PIX suspeito saindo da sua conta. Digite sua senha no teclado do telefone para cancelar.'",
+                opcoes: [
+                    { texto: "A) Digitar a senha rápido para impedir o golpe.", correta: false },
+                    { texto: "B) Desligar o telefone imediatamente e contatar o banco pelo número impresso no seu cartão.", correta: true },
+                    { texto: "C) Falar a senha em voz alta para o atendente resolver.", correta: false }
+                ],
+                explicacaoCorreta: " EXCELENTE! O banco nunca liga pedindo senhas por telefone nem pede digitação de códigos para cancelar transações.",
+                explicacaoIncorreta: " ATENÇÃO! Golpistas fazem ligações falsas para roubar senhas bancárias. Nunca forneça nem digite senhas durante chamadas telefônicas!"
+            },
+            3: {
+                situacao: "📩 Mensagem SMS recebida no seu celular:\n'Você ganhou um cupom de compras de R$ 500 no mercado! Clique aqui para cadastrar seu CPF e receber: http://premio-mercado.net'",
+                opcoes: [
+                    { texto: "A) Clicar no link para não perder a oportunidade.", correta: false },
+                    { texto: "B) Apagar a mensagem sem clicar em nada.", correta: true },
+                    { texto: "C) Enviar a mensagem para seus amigos.", correta: false }
+                ],
+                explicacaoCorreta: " PERFEITO! Ninguém distribui dinheiro ou cupons via SMS. Apagar a mensagem é a atitude mais segura.",
+                explicacaoIncorreta: " CUIDADO! Links enviados por SMS prometendo dinheiro fácil servem para instalar vírus no seu celular ou roubar dados."
+            }
+        };
+
+        function carregarCenario(numero, btnElement) {
+            document.querySelectorAll('.passo-btn').forEach(btn => btn.classList.remove('ativo'));
+            if(btnElement) btnElement.classList.add('ativo');
+
+            const dados = cenarios[numero];
+            const container = document.getElementById('cenario-conteudo');
+            const painelRes = document.getElementById('resultado-painel');
+            
+            painelRes.style.display = 'none';
+
+            let htmlOpcoes = '';
+            dados.opcoes.forEach((opcao) => {
+                htmlOpcoes += `
+                    <button class="btn-opcao" onclick="avaliarResposta(${numero}, ${opcao.correta})">
+                        ${opcao.texto}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <p><strong>Situação do Teste:</strong></p>
+                <div class="simulador-mensagem">${dados.situacao.replace(/\n/g, '<br>')}</div>
+                <p><strong>Qual é a atitude correta?</strong></p>
+                <div class="opcoes-grupo">${htmlOpcoes}</div>
+            `;
+        }
+
+        function avaliarResposta(numCenario, isCorreta) {
+            const painelRes = document.getElementById('resultado-painel');
+            const dados = cenarios[numCenario];
+
+            painelRes.style.display = 'block';
+
+            if (isCorreta) {
+                painelRes.className = 'resultado-simulacao resultado-correto';
+                painelRes.innerHTML = dados.explicacaoCorreta;
+            } else {
+                painelRes.className = 'resultado-simulacao resultado-errado';
+                painelRes.innerHTML = dados.explicacaoIncorreta;
+            }
+        }
+
+        // Inicializa o primeiro cenário ao abrir a página
+        window.onload = function() {
+            carregarCenario(1, null);
+        };
+    </script>
 </body>
 </html>
